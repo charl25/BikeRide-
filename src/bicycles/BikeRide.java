@@ -21,12 +21,12 @@ public class BikeRide {
         return this.bicycle.currentSpeed();
     }
 
-    public static void main(String[] args){
-        Bicycle bicycle = new Bicycle();
-        BikeRide bikeRide = new BikeRide(bicycle);
-        bikeRide.ride();
-
-        System.out.println(bikeRide.currentSpeed());
-    }
+//    public static void main(String[] args){
+//        Bicycle bicycle = new Bicycle();
+//        BikeRide bikeRide = new BikeRide(bicycle);
+//        bikeRide.ride();
+//
+//        System.out.println(bikeRide.currentSpeed());
+//    }
 
 }
