@@ -15,24 +15,27 @@ public class BikeRideTests {
     //Mountain Bike
     @Test
     public void shouldTakeMountainRideOne() {
+        BicycleSpecification mBikeSpec= new BicycleSpecification(5,3);
+        Bicycle bicycle = new BicycleFromSpec(mBikeSpec);
 
-        Bicycle bicycle = new MountainBike();
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(14, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeMountainRideTwo() {
+        BicycleSpecification mBikeSpec= new BicycleSpecification(5,3);
+        Bicycle bicycle = new BicycleFromSpec(mBikeSpec);
 
-        Bicycle bicycle = new MountainBike();
         BikeRide bikeRide = new BikeRideTwo(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(24, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeMountainRideThree() {
+        BicycleSpecification mBikeSpec= new BicycleSpecification(5,3);
+        Bicycle bicycle = new BicycleFromSpec(mBikeSpec);
 
-        Bicycle bicycle = new MountainBike();
         BikeRide bikeRide = new BikeRideThree(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(11, bicycle.currentSpeed());
@@ -41,24 +44,27 @@ public class BikeRideTests {
     //Road Bike
     @Test
     public void shouldTakeRoadRideOne() {
+        BicycleSpecification rBikeSpec= new BicycleSpecification(11,4);
+        Bicycle bicycle = new BicycleFromSpec(rBikeSpec);
 
-        Bicycle bicycle = new RoadBike();
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(36, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeRoadRideTwo() {
+        BicycleSpecification rBikeSpec= new BicycleSpecification(11,4);
+        Bicycle bicycle = new BicycleFromSpec(rBikeSpec);
 
-        Bicycle bicycle = new RoadBike();
         BikeRide bikeRide = new BikeRideTwo(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(58, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeRoadRideThree() {
+        BicycleSpecification rBikeSpec= new BicycleSpecification(11,4);
+        Bicycle bicycle = new BicycleFromSpec(rBikeSpec);
 
-        Bicycle bicycle = new RoadBike();
         BikeRide bikeRide = new BikeRideThree(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(32, bicycle.currentSpeed());
@@ -67,24 +73,27 @@ public class BikeRideTests {
     //Tandem Bike
     @Test
     public void shouldTakeTandemRideOne() {
+        BicycleSpecification tBikeSpec= new BicycleSpecification(12,7);
+        Bicycle bicycle = new BicycleFromSpec(tBikeSpec);
 
-        Bicycle bicycle = new Tandem();
         BikeRide bikeRide = new BikeRideOne(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(34, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeTandemRideTwo() {
+        BicycleSpecification tBikeSpec= new BicycleSpecification(12,7);
+        Bicycle bicycle = new BicycleFromSpec(tBikeSpec);
 
-        Bicycle bicycle = new Tandem();
         BikeRide bikeRide = new BikeRideTwo(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(58, bicycle.currentSpeed());
     }
     @Test
     public void shouldTakeTandemRideThree() {
+        BicycleSpecification tBikeSpec= new BicycleSpecification(12,7);
+        Bicycle bicycle = new BicycleFromSpec(tBikeSpec);
 
-        Bicycle bicycle = new Tandem();
         BikeRide bikeRide = new BikeRideThree(bicycle);
         bikeRide.ride(bicycle);
         assertEquals(27, bicycle.currentSpeed());

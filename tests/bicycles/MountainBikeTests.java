@@ -60,4 +60,5 @@ public class MountainBikeTests {
         assertEquals(0, bicycle.currentSpeed());
 
     }
+
 }
