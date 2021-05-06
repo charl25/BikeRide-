@@ -16,5 +16,9 @@ public class BicycleSpecification {
         return bicycleType.getBrake();
     }
 
+    public String getBikeType(){
+        return bicycleType.getBikeType();
+    }
+
 }
 
