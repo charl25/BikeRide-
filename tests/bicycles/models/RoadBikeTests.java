@@ -1,58 +1,59 @@
-package bicycles;
+package bicycles.models;
 
-import bicycles.models.MountainBike;
+import bicycles.Bicycle;
+import bicycles.models.RoadBike;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MountainBikeTests {
+public class RoadBikeTests {
 
     @Test
     public void shouldAccelerate() {
 
-        Bicycle bicycle = new MountainBike();
+        Bicycle bicycle = new RoadBike();
         bicycle.accelerate();
-        assertEquals(5, bicycle.currentSpeed());
+        assertEquals(11, bicycle.currentSpeed());
     }
 
     @Test
     public void shouldAccelerateAndBrakeCorrect() {
 
-        Bicycle bicycle = new MountainBike();
+        Bicycle bicycle = new RoadBike();
         bicycle.accelerate();
         bicycle.brake();
-        assertEquals(2, bicycle.currentSpeed());
+        assertEquals(7, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldDoMultipleAcceleratesCorrectly() {
 
-        Bicycle bicycle = new MountainBike();
+        Bicycle bicycle = new RoadBike();
         bicycle.accelerate();
         bicycle.accelerate();
         bicycle.accelerate();
-        assertEquals(15, bicycle.currentSpeed());
+        assertEquals(33, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldDoMultipleAccelerateAndBrakesCorrectly() {
 
-        Bicycle bicycle = new MountainBike();
+        Bicycle bicycle = new RoadBike();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.brake();
-        assertEquals(1, bicycle.currentSpeed());
+        assertEquals(10, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldBeAbleToStop() {
 
-        Bicycle bicycle = new MountainBike();
+        Bicycle bicycle = new RoadBike();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.accelerate();
@@ -60,5 +61,6 @@ public class MountainBikeTests {
         assertEquals(0, bicycle.currentSpeed());
 
     }
+
 
 }

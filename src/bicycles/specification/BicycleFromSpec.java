@@ -1,6 +1,9 @@
-package bicycles;
+package bicycles.specification;
 
-public class BicycleFromSpec extends BicycleBase{
+import bicycles.BicycleBase;
+import bicycles.specification.BicycleSpecification;
+
+public class BicycleFromSpec extends BicycleBase {
 
     private final BicycleSpecification bikeSpec;
 

@@ -1,58 +1,59 @@
-package bicycles;
+package bicycles.models;
 
-import bicycles.models.RoadBike;
+import bicycles.Bicycle;
+import bicycles.models.MountainBike;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RoadBikeTests {
+public class MountainBikeTests {
 
     @Test
     public void shouldAccelerate() {
 
-        Bicycle bicycle = new RoadBike();
+        Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
-        assertEquals(11, bicycle.currentSpeed());
+        assertEquals(5, bicycle.currentSpeed());
     }
 
     @Test
     public void shouldAccelerateAndBrakeCorrect() {
 
-        Bicycle bicycle = new RoadBike();
+        Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
         bicycle.brake();
-        assertEquals(7, bicycle.currentSpeed());
+        assertEquals(2, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldDoMultipleAcceleratesCorrectly() {
 
-        Bicycle bicycle = new RoadBike();
+        Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
         bicycle.accelerate();
         bicycle.accelerate();
-        assertEquals(33, bicycle.currentSpeed());
+        assertEquals(15, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldDoMultipleAccelerateAndBrakesCorrectly() {
 
-        Bicycle bicycle = new RoadBike();
+        Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.brake();
-        assertEquals(10, bicycle.currentSpeed());
+        assertEquals(1, bicycle.currentSpeed());
 
     }
 
     @Test
     public void shouldBeAbleToStop() {
 
-        Bicycle bicycle = new RoadBike();
+        Bicycle bicycle = new MountainBike();
         bicycle.accelerate();
         bicycle.brake();
         bicycle.accelerate();
@@ -60,6 +61,5 @@ public class RoadBikeTests {
         assertEquals(0, bicycle.currentSpeed());
 
     }
-
 
 }

@@ -1,17 +1,16 @@
-package bicycles;
+package bicycles.specification;
 
-import bicycles.models.MountainBike;
-import bicycles.models.RoadBike;
-import bicycles.models.Tandem;
-
+import bicycles.Bicycle;
+import bicycles.BicycleType;
+import bicycles.BikeRide;
 import bicycles.rides.BikeRideOne;
-import bicycles.rides.BikeRideTwo;
 import bicycles.rides.BikeRideThree;
+import bicycles.rides.BikeRideTwo;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BikeRideTests {
+public class SpecificationTests {
     //Mountain Bike
     @Test
     public void shouldTakeMountainRideOne() {
