@@ -12,7 +12,7 @@ public class FunRide {
         this.maxPerRide=maxPerRide;
     }
 
-    public void takeRide(BicycleType bike){
+    public void accept(BicycleType bike){
         String bicycle = bike.getBikeType();
 
         if(this.list.size()>=maxPerRide){
@@ -30,8 +30,8 @@ public class FunRide {
         int count = 0;
         String bicycle = bike.getBikeType();
 
-        for(int i = 0; i < list.size(); i++){
-         if(list.get(i)==bicycle) {
+        for(String ride : list){
+         if(ride.equals(bicycle)) {
              count++;
          }
         }

@@ -10,13 +10,13 @@ public class FunRideTest {
     public void shouldGetCountForTandemBikesOnFunRide(){
         FunRide funRide = new FunRide(5);
 
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
 
         assertEquals(1,funRide.getCountForType(BicycleType.Tandem));
     }
@@ -25,13 +25,13 @@ public class FunRideTest {
     public void shouldGetCountForRoadBikesOnFunRide(){
         FunRide funRide = new FunRide(5);
 
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
 
         assertEquals(2,funRide.getCountForType(BicycleType.RoadBike));
     }
@@ -40,13 +40,13 @@ public class FunRideTest {
     public void shouldGetCountForMountainBikesOnFunRide(){
         FunRide funRide = new FunRide(5);
 
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
 
         assertEquals(2,funRide.getCountForType(BicycleType.MountainBike));
     }
@@ -55,13 +55,13 @@ public class FunRideTest {
     public void shouldGetCountForAllBikesOnFunRide(){
         FunRide funRide = new FunRide(5);
 
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.MountainBike);
-        funRide.takeRide(BicycleType.RoadBike);
-        funRide.takeRide(BicycleType.Tandem);
-        funRide.takeRide(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.MountainBike);
+        funRide.accept(BicycleType.RoadBike);
+        funRide.accept(BicycleType.Tandem);
+        funRide.accept(BicycleType.RoadBike);
 
         assertEquals(5,funRide.getEnteredCount());
     }
