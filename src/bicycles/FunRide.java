@@ -6,19 +6,19 @@ import java.util.List;
 public class FunRide {
 
     private final int maxPerRide;
-    List<String> list = new ArrayList<String>();
+    List<Bicycle> list = new ArrayList<Bicycle>();
 
     public FunRide(int maxPerRide){
         this.maxPerRide=maxPerRide;
     }
 
-    public void accept(BicycleType bike){
-        String bicycle = bike.getBikeType();
+    public void accept(Bicycle bike){
+       //String bicycle = bike.getBikeType();
 
         if(this.list.size()>=maxPerRide){
             System.out.println("Maximum rides have been reached");
         }else{
-            this.list.add(bicycle);
+            this.list.add(bike);
         }
     }
 
@@ -28,10 +28,10 @@ public class FunRide {
 
     public int getCountForType(BicycleType bike){
         int count = 0;
-        String bicycle = bike.getBikeType();
+        //String bicycle = bike.getBikeType();
 
-        for(String ride : list){
-         if(ride.equals(bicycle)) {
+        for(Bicycle ride : list){
+         if(bike.equals(ride.getBicycleType())){
              count++;
          }
         }

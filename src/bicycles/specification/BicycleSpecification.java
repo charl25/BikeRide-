@@ -4,23 +4,23 @@ import bicycles.BicycleType;
 
 public class BicycleSpecification {
 
+    private int accelerationSpeed;
+    private int brakeSpeed;
     private final BicycleType bicycleType;
 
-
-    public BicycleSpecification(BicycleType bicycleType) {
-        this.bicycleType=bicycleType;
+    public BicycleSpecification(int accelerationSpeed, int brakeSpeed, BicycleType bicycleType) {
+        this.accelerationSpeed = accelerationSpeed;
+        this.brakeSpeed = -brakeSpeed;
+        this.bicycleType = bicycleType;
     }
-
-    public int getAccelerationSpeed(){
-        return bicycleType.getAccelerate();
+    public int getAccelerationSpeed () {
+        return  accelerationSpeed;
     }
-    public int getBrakeSpeed(){
-        return bicycleType.getBrake();
-    }
+    public int getBrakeSpeed () {
+                return brakeSpeed;
 
-    public String getBikeType(){
-        return bicycleType.getBikeType();
     }
-
+    public BicycleType getBicycleType () {
+        return bicycleType;
+    }
 }
-

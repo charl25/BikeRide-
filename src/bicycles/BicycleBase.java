@@ -21,4 +21,5 @@ public abstract class BicycleBase implements Bicycle {
         speed=0;
     }
 
+
 }
